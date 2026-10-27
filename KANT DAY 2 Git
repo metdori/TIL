@@ -43,7 +43,7 @@ git checkout b28bed1 (b28bed1 해당 커밋으로 이동)
 git remote add origin https://github.com/metdori/Kant.git (해당 주소를 origin 이라는 이름으로 원격 저장소에 등록)
 
 git remote -v (remote = 등록된 원격 이름 목록 보기, v = verbose 자세히 목록 uri까지 보기)
-origin  https://github.com/metdori/Kant.git (fetch) 원격에서 내려받을 때 쓰는 주소
+origin  https://github.com/metdori/Kant.git (fetch) 원격에서 내려받을 때 쓰는 주소, fetch + merge = pull
 origin  https://github.com/metdori/Kant.git (push) 원격으로 올릴 때 쓰는 주소
 
 git remote remove origin (remove = origin 삭제)
