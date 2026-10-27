@@ -1,0 +1,89 @@
+# KANT DAY 2
+
+```bash
+rm -rf . # (rm = 파일 삭제 명령어, -r = 하위파일까지 전부, -f = 확인 없이 바로 삭제)
+echo "# Markdown Tutorial" > README.md # (> = 덮어쓰기)
+cat README.md # (읽기)
+code . # (현재 폴더에서 vscode 실행)
+```
+
+---
+
+### 단축키 및 터미널 설정
+
+- `Ctrl + '` = Terminal 열기 단축키
+- `Ctrl + Shift + P` 로 `Terminal: Select Default Profile` 검색 후 git bash 를 기본 터미널로 설정
+- `Ctrl + L` = clear
+
+---
+
+### Git 기본 설정 및 저장소 생성
+
+```bash
+git --version # (버전 확인)
+git config --list # (config = configuration 구성, 설정)
+git config --global user.email "이메일.com" # (--global = 이 컴퓨터의 현재 사용자 계정이 사용하는 모든 Git 저장소에 이 설정을 적용, 없으면 현재 저장소에만 적용)
+git config --global --unset user.email # (--unset = 특정 항목 제거)
+git config --global user.name "이름"
+
+git init # (현재 폴더를 Git 저장소로 초기화, 숨김 폴더인 .git 생성됨)
+git status # (현재 Git 저장소의 상태를 확인)
+```
+
+- `touch README.md` (vscode 에서 U (Untracked) 라고 뜸. git 저장소에서 신규생성하고 아직 add 하지 않았기 때문)
+- `git add README.md` (vscode 에서 A (Added) 라고 뜸. 파일이 Staging Area = Index 에 추가되었기 때문)
+- `git commit -m "feat: Add README.md"` (스테이징된 변경 사항을 하나의 커밋으로 저장)
+- `git log` (저장소의 커밋 이력 조회, commit 039cd14... = 고유 Hash)
+
+---
+
+### Markdown 팁
+
+- ` ``` ` (Markdown에서 여러 줄 코드 블록 생성)
+- `md` (이 코드 블록 안의 내용이 md 문법이라는 뜻으로 색상으로 표기)
+- `Ctrl + Shift + V` (Markdown 미리보기 단축키)
+
+---
+
+### 커밋 및 VIM 편집기
+
+```bash
+git add . # (현재 폴더와 하위 폴더 전부 스테이징 영역에 업로드)
+git commit # (VIM 편집기 열기)
+```
+
+- 문장 맨 앞에 `"docs: 헤더 내용 추가"` (VIM 편집기로 메세지 직접 수정=commit -m 이랑 동일)
+- `Esc` (입력모드 종료)
+- `:wq` (w = 저장, q = 종료)
+
+```bash
+git log --oneline --all # (--oneline 커밋을 한 줄씩 간단하게 조회)
+git checkout b28bed1 # (b28bed1 해당 커밋으로 이동)
+```
+
+---
+
+### 원격 저장소 (Remote) 연결
+
+```bash
+git remote add origin [https://github.com/metdori/Kant.git](https://github.com/metdori/Kant.git) # (해당 주소를 origin 이라는 이름으로 원격 저장소에 등록)
+
+git remote -v # (remote = 등록된 원격 이름 목록 보기, v = verbose 자세히 목록 uri까지 보기)
+```
+
+- `origin https://github.com/metdori/Kant.git (fetch)` 원격에서 내려받을 때 쓰는 주소, fetch + merge = pull
+- `origin https://github.com/metdori/Kant.git (push)` 원격으로 올릴 때 쓰는 주소
+
+```bash
+git remote remove origin # (remove = origin 삭제)
+git push origin main # (origin 에 main 을 pull 하기, 이때 origin 은 위에서 등록한 주소에 해당)
+```
+
+---
+
+### 작업 및 push 기본 사이클
+
+1. vscode 로 md 파일 내용 수정하고
+2. `git add .` (staging area 올리고)
+3. `git commit -m "~~"` (~~라는 이름으로 커밋하고)
+4. `git push origin main` (커밋한 거 origin 에 해당하는 주소로 push 하기)
