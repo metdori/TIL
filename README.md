@@ -16,3 +16,4 @@
 | DAY 1 | 작업환경 설정 , Git 기초 | `winget`, `git`, `vscode` | [Link](<KANT/KANT DAY 1.md>) |
 | DAY 2 | Vsode & Github 연동 | `config`, `commit`, `remote` | [Link](<KANT/KANT DAY 2.md>) |
 | DAY 3 | Reset & Branch | `gitignore`, `reset`, `branch` | [Link](<KANT/KANT DAY 3.md>) |
+| DAY 4 | Merge & Conflict | `fast-forward`, `3-way`, `squash` | [Link](<KANT/KANT DAY 4.md>) |
