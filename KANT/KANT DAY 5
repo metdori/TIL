@@ -1,4 +1,4 @@
-KANT DAY 4
+KANT DAY 5
 
 
 @컴파일 방식 = 미리 소스 전체 변역  C C++
@@ -59,9 +59,46 @@ uv add ipykernel (toml 에 요구버전 추가됨)
 git add .
 git commit -m "feat: 주피터노트북 환경 설정"
 
+touch chapter01.ipynb (주피터노트북 파일 생성)
+
+@Ctrl + Shift + P = vscode 명령 팔레트 단축키
+
+
+@주피터노트북에서 +code 눌러서 cell 생성가능
+@select kernel -> python environmetns -> 별표 되어있는 .venv 에 설치된 클릭 (주피터노트북 엔진 선택)
+@cell 옆에 execute cell 로 바로 실행 가능
+print(sys.executable)
+
+@Ctrl + Enter = cell 바로 실행 단축키
+@Shift + Enter = cell 바로 실행, 쉘 생성 단축키
+@명령모드에서 M 키는 markdown cell 로 만듬
 
 
 
 
+---
+### 변수 이름 규칙
+
+- 숫자로 시작 불가 : 1_name (X)
+- 공백 불가 : user name (X)
+- 하이픈 불가 : user-age (X)
+- 예약어 사용불가 : if, def (X)
 
 
+### 컨벤션
+- 스네이크 표기법 : user_name, value_list
+
+### 다른 표기법
+- 파스칼 케이스 : UserName, ValueList
+- 카멜 케이스 (단봉낙타법) : userName
+
+# 정수형 자료형
+age : 25
+# 실수형 자료형
+pi = 3.14
+#불리언 자료형(Boolean)
+is_alive = True
+# 문자 자료형
+user_name = "KwakTaeEun"
+# 배열 Array
+grade_type = [1, 2, 3, 4]
