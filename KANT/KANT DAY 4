@@ -1,0 +1,67 @@
+KANT DAY 4
+
+
+@컴파일 방식 = 미리 소스 전체 변역  C C++
+@인터프리터 방식 = 그때그떄 변역 python
+
+winget search uv ( name = uv, id = astral-sh.uv 설치)
+
+mkdir first-project
+uv init --no-package (uv = 파이썬 종합 관리 도구, git 자동 연결 + branch 자동 생성, no package = src 폴더 생성 X, 비패키지 모드)
+code .
+git add .
+git commit -m "feat: 프로젝트 초기화"
+
+@.gitignore 에 자동으로 python 에 필요없는 것들 적혀있음
+@pyproject.toml = 이름, 버전 등 나타나있는 설계도
+
+
+uv run main.py (.venv = Virtual Environment 가상환경 = 각 프로젝트 별 버전 충돌 방지하는 라이브러리, .uv.lock = 영수증 / 두 파일 자동 생성됨)
+
+
+
+mkdir second-project
+uv init --no-package --python 3.13 (설치할 python 버전 선택함)
+cat .python-version (3.13 이라고 나옴)
+cat pyproject.toml (requires-python = ">=3.13" 라고 나옴)
+uv run main.py
+uv python pin 3.12 (파이썬 버전을 3.12 로 고정하는 명령어, requires-python 버전이 3.13 이상이라서 error 뜸)
+vi pyproject.toml (vim editor 열기, i 키로 요구버전 수정하고 저장 / code . 으로 vscode 에서 수정해도 됨)
+uv python pin 3.12 (이제 3.12 버전으로 업데이트됨)
+uv run main.py
+
+uv add fastapi (uv.lock 파일에 package 기록 추가됨, toml 파일에 fastapi 요구버전 추가됨)
+uv tree --depth 1 (설치한 라이브러리들 1단계로 표시)
+uv tree (설치한 라이브러리들 전부 표시)
+uv remote fastapi (toml 설계도에서 내역 삭제-> lock 영수증 수정, venv 폴더 실제 삭제)
+uv sync (remote 할 경우 대체로 자동으로 되지만 안 될 경우를 방지하고자 동기화)
+
+source .venv/Scripts/activate (현재 터미널에서 실행할 파이썬 경로 지정)
+which python (현재 터미널에서 python 을 명령하는 어느 위치의 파이썬 파일이 실행되는지)
+deactivate (파이썬 경로 지정 종료)
+which python (파이썬 위치가 바뀜)
+history
+!숫자
+python (파이썬 쉘 진입)
+exit
+
+touch hello.py
+python hello.py
+uv run hello.py (python 명령어와 동일하게 작동하지만 .venv 내의 파이썬 사용)
+uv run python (자동으로 .venv 내의 파이썬 사용)
+
+@Ctrl + Shift + X (Extensions 창 단축키)
+@Ctrl + Shift + E (Explorer 창 단축키)
+
+python 확장프로그램 설치
+jupyter 확장프로그램 설치
+uv add ipykernel (toml 에 요구버전 추가됨)
+git add .
+git commit -m "feat: 주피터노트북 환경 설정"
+
+
+
+
+
+
+
