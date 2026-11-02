@@ -1,214 +1,115 @@
 # KANT DAY 5
 
-@컴파일 방식 = 미리 소스 전체 변역 C C++  
-@인터프리터 방식 = 그때그떄 변역 python  
+컴파일 방식 = 미리 소스 전체 변역 C C++  
+인터프리터 방식 = 그때그떄 변역 python  
 
 ***
 
-### 프로젝트 생성 및 uv 기초
-
 ```bash
-winget search uv
-```
-( name = uv, id = astral-sh.uv 설치)
-
-```bash
+winget search uv # ( name = uv, id = astral-sh.uv 설치)
 mkdir first-project
-uv init --no-package
-```
-(uv = 파이썬 종합 관리 도구, git 자동 연결 + branch 자동 생성, no package = src 폴더 생성 X, 비패키지 모드)
-
-```bash
+uv init --no-package # (uv = 파이썬 종합 관리 도구, git 자동 연결 + branch 자동 생성, no package = src 폴더 생성 X, 비패키지 모드)
 code .
 git add .
 git commit -m "feat: 프로젝트 초기화"
 ```
-@.gitignore 에 자동으로 python 에 필요없는 것들 적혀있음  
-@pyproject.toml = 이름, 버전 등 나타나있는 설계도  
+
+.gitignore 에 자동으로 python 에 필요없는 것들 적혀있음  
+pyproject.toml = 이름, 버전 등 나타나있는 설계도  
 
 ```bash
-uv run main.py
-```
-(.venv = Virtual Environment 가상환경 = 각 프로젝트 별 버전 충돌 방지하는 라이브러리, .uv.lock = 영수증 / 두 파일 자동 생성됨)
-
-***
-
-### 파이썬 버전 관리 및 패키지 추가/삭제
-
-```bash
+uv run main.py # (.venv = Virtual Environment 가상환경 = 각 프로젝트 별 버전 충돌 방지하는 라이브러리, .uv.lock = 영수증 / 두 파일 자동 생성됨)
 mkdir second-project
-uv init --no-package --python 3.13
-```
-(설치할 python 버전 선택함)
-
-```bash
-cat .python-version
-```
-(3.13 이라고 나옴)
-
-```bash
-cat pyproject.toml
-```
-(requires-python = ">=3.13" 라고 나옴)
-
-```bash
+uv init --no-package --python 3.13 # (설치할 python 버전 선택함)
+cat .python-version # (3.13 이라고 나옴)
+cat pyproject.toml # (requires-python = ">=3.13" 라고 나옴)
 uv run main.py
-uv python pin 3.12
-```
-(파이썬 버전을 3.12 로 고정하는 명령어, requires-python 버전이 3.13 이상이라서 error 뜸)
-
-```bash
-vi pyproject.toml
-```
-(vim editor 열기, i 키로 요구버전 수정하고 저장 / code . 으로 vscode 에서 수정해도 됨)
-
-```bash
-uv python pin 3.12
-```
-(이제 3.12 버전으로 업데이트됨)
-
-```bash
+uv python pin 3.12 # (파이썬 버전을 3.12 로 고정하는 명령어, requires-python 버전이 3.13 이상이라서 error 뜸)
+vi pyproject.toml # (vim editor 열기, i 키로 요구버전 수정하고 저장 / code . 으로 vscode 에서 수정해도 됨)
+uv python pin 3.12 # (이제 3.12 버전으로 업데이트됨)
 uv run main.py
-uv add fastapi
-```
-(uv.lock 파일에 package 기록 추가됨, toml 파일에 fastapi 요구버전 추가됨)
-
-```bash
-uv tree --depth 1
-```
-(설치한 라이브러리들 1단계로 표시)
-
-```bash
-uv tree
-```
-(설치한 라이브러리들 전부 표시)
-
-```bash
-uv remote fastapi
-```
-(toml 설계도에서 내역 삭제-> lock 영수증 수정, venv 폴더 실제 삭제)
-
-```bash
-uv sync
-```
-(remote 할 경우 대체로 자동으로 되지만 안 될 경우를 방지하고자 동기화)
-
-***
-
-### 가상환경 실행 및 파이썬 실행
-
-```bash
-source .venv/Scripts/activate
-```
-(현재 터미널에서 실행할 파이썬 경로 지정)
-
-```bash
-which python
-```
-(현재 터미널에서 python 을 명령하는 어느 위치의 파이썬 파일이 실행되는지)
-
-```bash
-deactivate
-```
-(파이썬 경로 지정 종료)
-
-```bash
-which python
-```
-(파이썬 위치가 바뀜)
-
-```bash
+uv add fastapi # (uv.lock 파일에 package 기록 추가됨, toml 파일에 fastapi 요구버전 추가됨)
+uv tree --depth 1 # (설치한 라이브러리들 1단계로 표시)
+uv tree # (설치한 라이브러리들 전부 표시)
+uv remote fastapi # (toml 설계도에서 내역 삭제-> lock 영수증 수정, venv 폴더 실제 삭제)
+uv sync # (remote 할 경우 대체로 자동으로 되지만 안 될 경우를 방지하고자 동기화)
+source .venv/Scripts/activate # (현재 터미널에서 실행할 파이썬 경로 지정)
+which python # (현재 터미널에서 python 을 명령하는 어느 위치의 파이썬 파일이 실행되는지)
+deactivate # (파이썬 경로 지정 종료)
+which python # (파이썬 위치가 바뀜)
 history
 !숫자
-python
-```
-(파이썬 쉘 진입)
-
-```bash
+python # (파이썬 쉘 진입)
 exit
 touch hello.py
 python hello.py
-uv run hello.py
+uv run hello.py # (python 명령어와 동일하게 작동하지만 .venv 내의 파이썬 사용)
+uv run python # (자동으로 .venv 내의 파이썬 사용)
 ```
-(python 명령어와 동일하게 작동하지만 .venv 내의 파이썬 사용)
-
-```bash
-uv run python
-```
-(자동으로 .venv 내의 파이썬 사용)
 
 ***
 
-### 주피터 노트북 환경 설정
-
-@Ctrl + Shift + X (Extensions 창 단축키)  
-@Ctrl + Shift + E (Explorer 창 단축키)  
+Ctrl + Shift + X (Extensions 창 단축키)  
+Ctrl + Shift + E (Explorer 창 단축키)  
 python 확장프로그램 설치  
 jupyter 확장프로그램 설치  
 
 ```bash
-uv add ipykernel
-```
-(toml 에 요구버전 추가됨)
-
-```bash
+uv add ipykernel # (toml 에 요구버전 추가됨)
 git add .
 git commit -m "feat: 주피터노트북 환경 설정"
-touch chapter01.ipynb
+touch chapter01.ipynb # (주피터노트북 파일 생성)
 ```
-(주피터노트북 파일 생성)
 
-@Ctrl + Shift + P = vscode 명령 팔레트 단축키  
-@주피터노트북에서 +code 눌러서 cell 생성가능  
-@select kernel -> python environmetns -> 별표 되어있는 .venv 에 설치된 클릭 (주피터노트북 엔진 선택)  
-@cell 옆에 execute cell 로 바로 실행 가능  
+Ctrl + Shift + P = vscode 명령 팔레트 단축키  
+주피터노트북에서 +code 눌러서 cell 생성가능  
+select kernel -> python environmetns -> 별표 되어있는 .venv 에 설치된 클릭 (주피터노트북 엔진 선택)  
+cell 옆에 execute cell 로 바로 실행 가능  
 
 ```python
 print(sys.executable)
 ```
 
-@Ctrl + Enter = cell 바로 실행 단축키  
-@Shift + Enter = cell 바로 실행, 쉘 생성 단축키  
-@명령모드에서 M 키는 markdown cell 로 만듬  
+Ctrl + Enter = cell 바로 실행 단축키  
+Shift + Enter = cell 바로 실행, 쉘 생성 단축키  
+명령모드에서 M 키는 markdown cell 로 만듬  
 
 ***
 
-### 파이썬 문법 기초
-
-변수 이름 규칙
+### 변수 이름 규칙
 - 숫자로 시작 불가 : 1_name (X)
 - 공백 불가 : user name (X)
 - 하이픈 불가 : user-age (X)
 - 예약어 사용불가 : if, def (X)
 
-컨벤션
+### 컨벤션
 - 스네이크 표기법 : user_name, value_list
 
-다른 표기법
+### 다른 표기법
 - 파스칼 케이스 : UserName, ValueList
 - 카멜 케이스 (단봉낙타법) : userName
 
-정수형 자료형
+### 정수형 자료형
 ```python
 age : 25
 ```
 
-실수형 자료형
+### 실수형 자료형
 ```python
 pi = 3.14
 ```
 
-#불리언 자료형(Boolean)
+### #불리언 자료형(Boolean)
 ```python
 is_alive = True
 ```
 
-문자 자료형
+### 문자 자료형
 ```python
 user_name = "KwakTaeEun"
 ```
 
-배열 Array
+### 배열 Array
 ```python
 grade_type = [1, 2, 3, 4]
 ```
