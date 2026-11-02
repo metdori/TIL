@@ -6,7 +6,7 @@
 ***
 
 ```bash
-winget search uv # ( name = uv, id = astral-sh.uv 설치)
+winget search uv # (name = uv, id = astral-sh.uv 설치)
 mkdir first-project
 uv init --no-package # (uv = 파이썬 종합 관리 도구, git 자동 연결 + branch 자동 생성, no package = src 폴더 생성 X, 비패키지 모드)
 code .
@@ -69,10 +69,12 @@ cell 옆에 execute cell 로 바로 실행 가능
 ```python
 print(sys.executable)
 ```
+### 단축키
 
 Ctrl + Enter = cell 바로 실행 단축키  
 Shift + Enter = cell 바로 실행, 쉘 생성 단축키  
 명령모드에서 M 키는 markdown cell 로 만듬  
+명령모드에서 Y 키는 python cell 로 만듬
 
 ***
 
@@ -99,7 +101,7 @@ age : 25
 pi = 3.14
 ```
 
-### #불리언 자료형(Boolean)
+### 불리언 자료형(Boolean) = 참거짓
 ```python
 is_alive = True
 ```
