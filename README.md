@@ -19,3 +19,4 @@
 | DAY 4 | Merge & Conflict | `fast-forward`, `3-way`, `squash` | [Link](<KANT/KANT DAY 4.md>) |
 | DAY 5 | Uv & Python | `uv`, `python`, `jupyter` | [Link](<KANT/KANT DAY 5.md>) |
 | DAY 6 | Cli & Python | `list`, `tuple`, `dictionary` | [Link](<KANT/KANT DAY 6.md>) |
+| DAY 6 | Dictionary & Set | `for`, `if`, `while` | [Link](<KANT/KANT DAY 7.md>) |
