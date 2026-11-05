@@ -21,4 +21,4 @@
 | DAY 6 | Cli & Python | `list`, `tuple`, `dictionary` | [Link](<KANT/KANT DAY 6.md>) |
 | DAY 7 | Dictionary & Set | `for`, `if`, `while` | [Link](<KANT/KANT DAY 7.md>) |
 | DAY 8 | Function & Lambda | `parameter`, `global`, `map` | [Link](<KANT/KANT DAY 8.md>) |
-| DAY 9 |  & L | ``, ``, `` | [Link](<KANT/KANT DAY 9.md>) |
+| DAY 9 | Class & Debug | `class`, `init`, `self` | [Link](<KANT/KANT DAY 9.md>) |
