@@ -22,3 +22,4 @@
 | DAY 7 | Dictionary & Set | `for`, `if`, `while` | [Link](<KANT/KANT DAY 7.md>) |
 | DAY 8 | Function & Lambda | `parameter`, `global`, `map` | [Link](<KANT/KANT DAY 8.md>) |
 | DAY 9 | Class & Debug | `class`, `init`, `self` | [Link](<KANT/KANT DAY 9.md>) |
+| DAY 10 | Uv & Python | `import`, `strip`, `def` | [Link](<KANT/KANT DAY 10.md>) |
