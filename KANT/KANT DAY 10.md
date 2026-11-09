@@ -3,9 +3,9 @@
 ## 가위/바위/보 게임 (3판2선승제)
 ```python
 
-rps_game # (폴더 생성)
-cd rps_game (ll = ls -l 단축키)
-uv init --no-package # (uv를 활용하는 파이썬 생성 폴더로 지정, --no-package = src/ 폴더 없이 생성, 파일을 배포할 목적이 아닐 때 사용)
+rps_game # 폴더 생성
+cd rps_game # ll = ls -l 단축키
+uv init --no-package # uv를 활용하는 파이썬 생성 폴더로 지정, --no-package = src/ 폴더 없이 생성, 파일을 배포할 목적이 아닐 때 사용
 
 
 # 가위 바위 보 게임 (3판 2선승제)
@@ -25,7 +25,7 @@ def show_title():
 def ask_name():
     name = input("플레이어 이름을 입력하세요. ").strip() # strip() = 문자열 앞뒤 공백 제거
     if name == "":
-        name = "게스트" #이름 입력 안하면 게스트라고 지정
+        name = "게스트" # 이름 입력 안하면 게스트라고 지정
     return name # 함수 밖으로 name 값을 ask_name()으로 반환
 
 # 게임의 전체 루프
