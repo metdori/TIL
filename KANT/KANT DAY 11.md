@@ -211,10 +211,10 @@ class Wallet:
     def __init__(self):
         self.__money = 1000 # 숨겨진 데이터
 
-    def get_money(self): # Getter = 값을 안전하게 전달하는 용도
+    def get_money(self): # Getter = 비공개 속성의 값을 외부에서 안전하게 조회할 수 있도록 꺼내주는 메서드
         return self.__money
 
-    def set_money(self, amount): # Setter = 값을 검증하는 용도
+    def set_money(self, amount): # Setter = 외부에서 전달된 값의 유효성을 검증한 뒤에만 내부 속성에 반영하는 메서드
         if amount >= 0:
             self.__money = amount
         else:
