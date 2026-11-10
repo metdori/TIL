@@ -23,4 +23,5 @@
 | DAY 8 | Function & Lambda | `parameter`, `global`, `map` | [Link](<KANT/KANT DAY 8.md>) |
 | DAY 9 | Class & Debug | `class`, `init`, `self` | [Link](<KANT/KANT DAY 9.md>) |
 | DAY 10 | Uv & Python | `import`, `strip`, `def` | [Link](<KANT/KANT DAY 10.md>) |
-| DAY 11 | Def & Class | `enumerate`, `lower`, `super` | [Link](<KANT/KANT DAY 11.md>) |
+| DAY 11 | Python & Class | `enumerate`, `lower`, `super` | [Link](<KANT/KANT DAY 11.md>) |
+| DAY 12 | Python & Class | `__init__`, `__str__`, `if else` | [Link](<KANT/KANT DAY 12.md>) |
