@@ -11,6 +11,8 @@
 - SELECT(조회), INSERT(입력), UPDATE(수정), DELETE(삭제)
 
   
+---
+
 
 - pay_amount NUMERIC(10, 2) # NUMERIC 고정 소수점 숫자, 최대 10자리 중에서 소숫점은 최대 2자리
 - username VARCHAR(50) # VARCHAR 가변 길이 문자열
@@ -18,6 +20,7 @@
 - CONSTRAINT chk_age CHECK (age >= 18) # CONSTRAINT 제약 조건
 - TRUNCATE TABLE access_logs; # TRUNCATE 데이터 일괄 삭제 명령어, 뼈대는 삭제 X / DROP 뼈대까지 삭제 O
 
+---
 
 ```sql
 -- docker compose cp sportscenter_seed.sql db:/tmp/sportscenter_seed.sql # sql 파일을 컨테이너 안에 복사
