@@ -188,7 +188,7 @@ DROP TABLE IF EXISTS lockers;
 ```
 
 ### 1:1 사물함 테이블
-```
+```sql
 CREATE TABLE lockers
 (
     locker_no   INT     PRIMARY KEY,
