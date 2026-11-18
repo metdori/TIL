@@ -29,4 +29,5 @@
 | DAY 14 | Docker & PostgreSQL  | `image`, `container`, `nginx ` | [Link](<KANT/KANT DAY 14.md>) |
 | DAY 15 | Docker & postgreSQL  | `database`, `volume`, `compose` | [Link](<KANT/KANT DAY 15.md>) |
 | DAY 16 | Docker & postgreSQL  | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 16.md>) |
-| DAY 17 | Docker & postgreSQL  | `TRUNCATE`, `CASCADE`, `CHECK` | [Link](<KANT/KANT DAY 17.md>) |
+| DAY 16 | Docker & postgreSQL  | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 16.md>) |
+| DAY 18 | Docker & postgreSQL  | `CHECK`, `UNION`, `JOIN` | [Link](<KANT/KANT DAY 18.md>) |
