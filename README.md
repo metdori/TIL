@@ -26,8 +26,9 @@
 | DAY 11 | Python & Class | `enumerate`, `lower`, `super` | [Link](<KANT/KANT DAY 11.md>) |
 | DAY 12 | Python & Class | `__init__`, `__str__`, `if else` | [Link](<KANT/KANT DAY 12.md>) |
 | DAY 13 | Python & Class | `__name__`, `__main__`, `wsl` | [Link](<KANT/KANT DAY 13.md>) |
-| DAY 14 | Docker & PostgreSQL  | `image`, `container`, `nginx ` | [Link](<KANT/KANT DAY 14.md>) |
-| DAY 15 | Docker & postgreSQL  | `database`, `volume`, `compose` | [Link](<KANT/KANT DAY 15.md>) |
-| DAY 16 | Docker & postgreSQL  | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 16.md>) |
-| DAY 16 | Docker & postgreSQL  | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 16.md>) |
-| DAY 18 | Docker & postgreSQL  | `CHECK`, `UNION`, `JOIN` | [Link](<KANT/KANT DAY 18.md>) |
+| DAY 14 | Docker & PostgreSQL | `image`, `container`, `nginx ` | [Link](<KANT/KANT DAY 14.md>) |
+| DAY 15 | Docker & postgreSQL | `database`, `volume`, `compose` | [Link](<KANT/KANT DAY 15.md>) |
+| DAY 16 | Docker & postgreSQL | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 16.md>) |
+| DAY 17 | Docker & postgreSQL | `yaml`, `ALTER`, `REFERENCES` | [Link](<KANT/KANT DAY 17.md>) |
+| DAY 18 | Docker & postgreSQL | `CHECK`, `UNION`, `JOIN` | [Link](<KANT/KANT DAY 18.md>) |
+| DAY 19 | PostgreSQL & psycopg | `RETURNING`, `UPDATE`, `SET` | [Link](<KANT/KANT DAY 19.md>) |
